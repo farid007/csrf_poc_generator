@@ -17,12 +17,11 @@ user_enctype = None
 if arg.method is not None:
     method_arg = arg.method
     method_arg = method_arg.upper()
-    method_list = ["POST", "DELETE", "PUT"]
+    method_list = ["POST", "GET"]
     if method_arg in method_list:
         method = method_arg
     else:
-        print("Methods Supported [ POST DELETE PUT ]")
-        print("Example -m POST/DELETE/PUT")
+        print("Methods Supported [  GET and POST ]")
         exit(0)
 else:
     print(parser.format_help())
