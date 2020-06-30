@@ -5,7 +5,7 @@ import urllib.parse
 parser = argparse.ArgumentParser(description='This is a pyhton script which generates PoC for Cross-site request forgery with autosubmit form. you just need to provide Url, method and parameters.')
 parser.add_argument('-m', '--method', help='Method')
 parser.add_argument('-u', '--url', help='url')
-parser.add_argument('-p', '--parameters', help='Request parameters')
+parser.add_argument('-p', '--parameters', help='Request parameter')
 parser.add_argument('-a', '--author', help='Name of Author')
 parser.add_argument('-e', '--enctype', help='enctype')
 
@@ -53,6 +53,7 @@ if arg.enctype is not None:
 # to find out the name value pairs of parameters
 def parameters(params):
     name_value = dict()  # define a dict variable
+    params = params.replace('"', '%22')
     if '&' and '=' in params:
         split_by_amp = params.split('&')  # split by &
         for i in split_by_amp:
