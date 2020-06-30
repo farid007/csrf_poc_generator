@@ -2,7 +2,7 @@ import argparse
 from yattag import Doc, indent
 import urllib.parse
 
-parser = argparse.ArgumentParser(description='CSRF')
+parser = argparse.ArgumentParser(description='This is a pyhton script which generates PoC for Cross-site request forgery with autosubmit form. you just need to provide Url, method and parameters.')
 parser.add_argument('-m', '--method', help='Method')
 parser.add_argument('-u', '--url', help='url')
 parser.add_argument('-p', '--parameters', help='Request parameter')
@@ -58,7 +58,7 @@ def parameters(params):
         split_by_amp = params.split('&')  # split by &
         for i in split_by_amp:
             split_by_eq = i.split('=')
-            if split_by_eq[1] is '':
+            if split_by_eq[1] == '':
                 split_by_eq[1] = ' '
             name_value[split_by_eq[0]] = split_by_eq[1]
     else:
@@ -75,7 +75,7 @@ def form_create(method, url, params, author='', enc_type='application/x-www-form
             text('This CSRF was found by ' + author)
         with tag('body'):
             with tag('h1'):
-                text('This POC was Created By CSRF Tool')
+                text('This POC was Created By CSRF PoC Generator Tool')
             with tag('form', action=url, method=method, enctype=enc_type):
                 for name in params:
                     value = params[name]
