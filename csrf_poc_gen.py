@@ -5,7 +5,7 @@ import urllib.parse
 parser = argparse.ArgumentParser(description='This is a pyhton script which generates PoC for Cross-site request forgery with autosubmit form. you just need to provide Url, method and parameters.')
 parser.add_argument('-m', '--method', help='Method')
 parser.add_argument('-u', '--url', help='url')
-parser.add_argument('-p', '--parameters', help='Request parameter')
+parser.add_argument('-p', '--parameters', help='Request parameters')
 parser.add_argument('-a', '--author', help='Name of Author')
 parser.add_argument('-e', '--enctype', help='enctype')
 
