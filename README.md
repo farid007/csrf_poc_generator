@@ -32,7 +32,7 @@ optional arguments:
 
 # JSON Based CSRF PoC 
 
-Note: Some applications accept Json data when Content-type: ```text/plain```
+Note: Some applications accept Json data when Content-type: ```text/plain```.
 
 ```
 root@ghost:~# python3 csrf_poc_gen.py -u http://example.com -m post -p '{new_password: "hacker", re_password: "hacker", extra": =extra}' -e "text/plain"
