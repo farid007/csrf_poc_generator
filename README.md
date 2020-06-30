@@ -23,7 +23,7 @@ optional arguments:
                         Method
   -u URL, --url URL     url
   -p PARAMETERS, --parameters PARAMETERS
-                        Request parameter
+                        Request parameters
   -a AUTHOR, --author AUTHOR
                         Name of Author
   -e ENCTYPE, --enctype ENCTYPE
