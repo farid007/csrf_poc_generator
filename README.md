@@ -33,6 +33,8 @@ optional arguments:
 
 
 # To Generate PoC 
+
+Note: Parameters should be in key value pair (key=value&key=value)
 ```
 root@ghost:~# python3 csrf_poc_gen.py -u http://example.com -m post -p "new_password=hacker&re_new_password=hacker" 
 <html>
