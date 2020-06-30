@@ -57,7 +57,7 @@ root@ghost:~# python3 csrf_poc_gen.py -u http://example.com -m post -p "new_pass
 
 
 # Enctype
-it supports 3 enctype application/x-www-form-urlencoded, multipart/form-data and text/plain.
+it supports 3 enctype ```application/x-www-form-urlencoded```, ```multipart/form-data``` and ```text/plain```.
 
 ```
 root@ghost:~# python3 csrf_poc_gen.py -u http://example.com -m post -p "new_password=hacker&re_new_password=hacker" -e "text/plain"
