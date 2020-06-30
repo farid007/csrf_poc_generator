@@ -78,7 +78,7 @@ root@ghost:~# python3 csrf_poc_gen.py -u http://example.com -m post -p "new_pass
 
 
 
-# With discoverer name
+# With Discoverer Name
 
 ```
 root@ghost:~# python3 csrf_poc_gen.py -u http://example.com -m post -p "new_password=hacker&re_new_password=hacker" -a "Hacker man"
